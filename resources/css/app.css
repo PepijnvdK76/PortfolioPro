@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.content {
+    position:absolute;
+    margin-top: 20%;
+}
+
+h1, .lead {
+    color: #fff;
+}
+body, html {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.section {
+    min-height: 750px;
+    max-height: 750px;
+    position: relative;
+    text-align: center;
+    font-family: sans-serif, arial;
+    margin: 0;
+}
+
+h1, p {
+    margin: 0;
+    font-family: sans-serif, arial;
+    font-weight: bold;
+}
+
+.text-wr {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.container{
+    justify-content: center;
+    display: flex;
+
+}
+
+#background-video {
+    max-width: 100% ;
+    z-index: 1;
+
+}
+
+#section2 {
+    background: #4bbfc3;
+    color: #81d2d5;
+}
+
+#section3 {
+    background: #283044;
+    color: #686e7c;
+}
+
+#section4 {
+    background: #ebf5ee;
+    color: #aeb9b9;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 25px;
+}

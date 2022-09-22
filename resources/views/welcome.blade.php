@@ -7,9 +7,12 @@
     <title>Pepijn van den Kieboom</title>
     <!-- Load the Latest Font Awesome Iconic Font. OPTIONAL -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
     <!-- Load the latest Bootstrap 5 or Bootstrap 4 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/flatly/bootstrap.min.css">
     <style>
+        @import url('https://www.fontspace.com/lemon-milk-font-f44669');
         .content {
             position:absolute;
             margin-top: 20%;
@@ -21,6 +24,7 @@
         body, html {
             margin: 0 auto;
             padding: 0;
+            scrollbar-width: thin;
         }
 
         .section {
@@ -45,7 +49,6 @@
         .container{
             justify-content: center;
             display: flex;
-
         }
 
         #background-video {
@@ -84,20 +87,20 @@
             <p class="lead">Student Web Development</p>
         </div>
     </div>
-        <video id="background-video" autoplay loop muted poster="{{ Vite::asset('resources/media/staticScreen.mp4') }}">
-            <source src="{{ Vite::asset('resources/media/staticScreen.mp4') }}" type="video/mp4">
-        </video>
+    <video id="background-video" autoplay loop muted poster="{{ Vite::asset('resources/media/whiteWaves.mp4') }}">
+        <source src="{{ Vite::asset('resources/media/whiteWaves.mp4') }}" type="video/mp4">
+    </video>
 </div>
 <div id="section2" class="section">
     <div class="text-wr">
-        <h1 class="title">Section 2</h1>
-        <x-carousel/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+        <h1 class="title">About me</h1>
+        <p>My name is Pepijn van den Kieboom i am a software developer student at Curio in Breda.</p>
     </div>
 </div>
 <div id="section3" class="section">
     <div class="text-wr">
-        <h1 class="title">Section 3</h1>
+        <h1 class="title">Work</h1>
+        <x-carousel/>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
     </div>
 </div>

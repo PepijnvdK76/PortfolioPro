@@ -1,5 +1,9 @@
-
-<header class="py-3 bg-black bg-opacity-25 navbar fixed-top">
+<style>
+    .offCanvasBtn{
+        background-color: #48a9a6;
+    }
+</style>
+<header class="py-3 navbar fixed-top">
     <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 20fr;">
         <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" tabindex="-1" role="button" aria-controls="offcanvasExample">
             ☰
@@ -25,8 +29,8 @@
             <div class="w-100 me-3">
             </div>
             <div class="flex-shrink-0 dropdown">
-                <a class="navbar-brand " href="#">
-                    <img src="{{ Vite::asset('resources/media/moutaing.jpg')}}" alt="Bootstrap" width="30" height="24">
+                <a class="navbar-brand " href="{{ route('dashboard') }}">
+                    <img  class="rounded-circle" src="{{ Vite::asset('resources/media/moutaing.jpg')}}" alt="Bootstrap" height="30px" width="30px">
                 </a>
             </div>
 
