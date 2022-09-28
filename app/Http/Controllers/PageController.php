@@ -11,4 +11,8 @@ class PageController extends Controller
         $projects = Project::all();
         return view('welcome')->with('projects', $projects);
     }
+    public function projectsDashboard() {
+        $projects = Project::all();
+        return view('dashboard')->with('projects', $projects);
+    }
 }

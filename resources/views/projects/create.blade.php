@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Add New Product</h2>
+                <h2>Add New Project</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('projects.index') }}"> Back</a>
@@ -32,7 +32,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Detail:</strong>
+                    <strong>Description:</strong>
                     <textarea class="form-control" style="height:150px" name="description" placeholder="Description"></textarea>
                 </div>
             </div>
@@ -43,11 +43,14 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Category:</strong>
                 <select class="form-select" name="category" aria-label="Default select example">
                     <option value="School">School</option>
                     <option value="Internship" >Internship</option>
                     <option value="Own work" >Own work</option>
                 </select>
+                </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">

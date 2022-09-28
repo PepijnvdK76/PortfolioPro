@@ -10,7 +10,7 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden pl-2 sm:flex">
-                    <x-nav-link :href="route('welcome')">
+                    <x-nav-link :href="route('home')">
                         {{ __('Welcome') }}
                     </x-nav-link>
                 </div>

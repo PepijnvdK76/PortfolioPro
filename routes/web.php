@@ -22,9 +22,8 @@ Route::get('/project', function (){
     return view('project');
 })->name('project');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [PageController::class, 'projectsDashboard'])
+    ->middleware(['auth'])->name('dashboard');
 
 Route::resource('projects', ProjectController::class);
 

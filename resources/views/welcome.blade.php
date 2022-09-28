@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="col">
-                <img src="https://cohenwoodworking.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" class="d-block w-100" alt="...">
+                <img src="https://cohenwoodworking.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" class="d-block vh-100" alt="...">
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{ Vite::asset('resources/media/woods.jpg') }}" class=" d-block w-100" alt="...">
+                    <img src="{{ Vite::asset('resources/media/woods.jpg') }}" class=" d-block w-100 h-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>First slide label</h5>
                         <p>Some representative placeholder content for the first slide.</p>
@@ -49,10 +49,7 @@
                 </div>
                 @foreach($projects as $project)
                 <div class="carousel-item">
-
-                        <img src="/images/{{ $project->image }}" width="100px">
-
-
+                        <img src="/images/{{ $project->image }}" class=" d-block w-50">
                 </div>
                 @endforeach
                 {{--<div class="carousel-item">

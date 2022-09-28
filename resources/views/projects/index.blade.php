@@ -44,6 +44,8 @@
         @endforeach
     </table>
 
+{{--
     {!! $projects->links() !!}
+--}}
 
 @endsection
