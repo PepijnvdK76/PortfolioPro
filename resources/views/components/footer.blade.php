@@ -1,5 +1,6 @@
-<nav class="navbar  bg-black">
+<div class="navbar @if(request()->is('/project'))fixed-bottom @endif bg-custom">
     <div class="container-fluid justify-content-center">
-        <p class="lead">@Pepijn van den Kieboom</p>
+        <p class="titleDark">@Pepijn van den Kieboom</p>
     </div>
-</nav>
+</div>
+</html>

@@ -1,17 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.content {
+
+
+.content{
     position:absolute;
     margin-top: 20%;
-}
 
-h1, .lead {
-    color: #fff;
+}
+.content h1, .lead{
+    color: #2b2b2b;
+
+}
+.titleDark{
+    color:#e2ebf0 ;
 }
 body, html {
     margin: 0 auto;
     padding: 0;
+    scrollbar-width: thin;
 }
 
 .section {
@@ -22,9 +29,16 @@ body, html {
     font-family: sans-serif, arial;
     margin: 0;
 }
-
-h1, p {
+.Psection {
+    min-height: 750px;
+    max-height: 750px;
+    position: relative;
+    text-align: center;
+    font-family: sans-serif, arial;
     margin: 0;
+}
+
+h1, p, a {
     font-family: sans-serif, arial;
     font-weight: bold;
 }
@@ -46,21 +60,43 @@ h1, p {
 }
 
 #section2 {
-    background: #4bbfc3;
-    color: #81d2d5;
+    background-image: linear-gradient(to left bottom, #f4f4f4, #d9d9da, #c0bebf, #a8a4a5, #908b8b);}
+#section2 , p{
+    color: #2b2b2b;
+}
+#section2 , h1{
+    color: #2b2b2b;
 }
 
 #section3 {
-    background: #283044;
+background: #2b2b2b  ;
     color: #686e7c;
 }
+.bg-custom{
+    background: #2c3e50  ;
 
+}
 #section4 {
-    background: #ebf5ee;
+    background-image: linear-gradient(to left bottom, #f4f4f4, #d9d9da, #c0bebf, #a8a4a5, #908b8b);    /*
+    background: #1b1c1e;
+    */
     color: #aeb9b9;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
     font-size: 50px;
     margin-bottom: 25px;
+}
+/*Contact form*/
+
+.wrap-contact2 {
+    width: 790px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 72px 55px 90px 55px;
 }

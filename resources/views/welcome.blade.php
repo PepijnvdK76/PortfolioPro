@@ -1,83 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pepijn van den Kieboom</title>
-    <!-- Load the Latest Font Awesome Iconic Font. OPTIONAL -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
-    <!-- Load the latest Bootstrap 5 or Bootstrap 4 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/flatly/bootstrap.min.css">
-    <style>
-        @import url('https://www.fontspace.com/lemon-milk-font-f44669');
-        .content {
-            position:absolute;
-            margin-top: 20%;
-        }
-
-        h1, .lead {
-            color: #fff;
-        }
-        body, html {
-            margin: 0 auto;
-            padding: 0;
-            scrollbar-width: thin;
-        }
-
-        .section {
-            min-height: 750px;
-            max-height: 750px;
-            position: relative;
-            text-align: center;
-            font-family: sans-serif, arial;
-            margin: 0;
-        }
-
-        h1, p {
-            margin: 0;
-            font-family: sans-serif, arial;
-            font-weight: bold;
-        }
-
-        .text-wr {
-            max-width: 960px;
-            margin: 0 auto;
-        }
-        .container{
-            justify-content: center;
-            display: flex;
-        }
-
-        #background-video {
-            max-width: 100% ;
-            z-index: 1;
-
-        }
-
-        #section2 {
-            background: #4bbfc3;
-            color: #81d2d5;
-        }
-
-        #section3 {
-            background: #283044;
-            color: #686e7c;
-        }
-
-        #section4 {
-            background: #ebf5ee;
-            color: #aeb9b9;
-        }
-
-        h1 {
-            font-size: 50px;
-            margin-bottom: 25px;
-        }
-    </style>
-</head>
+<x-head></x-head>
 <body>
 <x-header></x-header>
 <div id="section1" class="section">
@@ -92,38 +13,75 @@
     </video>
 </div>
 <div id="section2" class="section">
-    <div class="text-wr">
-        <h1 class="title">About me</h1>
-        <p>My name is Pepijn van den Kieboom i am a software developer student at Curio in Breda.</p>
+    <div class="text-center">
+        <div class="row g-0">
+            <div class="col">
+                <div class="text-wr p-5">
+                    <h1 class="title pt-5">About me</h1>
+                    <p>My name is Pepijn van den Kieboom i am a software developer student at Curio in Breda.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam blanditiis debitis earum eligendi enim fugit odio perferendis reprehenderit, sint tenetur unde voluptate voluptatibus. Dolorem eum iusto placeat rerum saepe.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa, delectus dignissimos eaque earum error eum facilis fuga ipsa ipsum laboriosam minima minus neque quis quisquam sit tempora voluptate voluptates.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cupiditate dolorem dolorum facilis harum laboriosam maiores officiis placeat, porro quisquam reiciendis tempore totam velit? Autem, harum, quasi? Officia, placeat, soluta?</p>
+                </div>
+            </div>
+            <div class="col">
+                <img src="https://cohenwoodworking.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
     </div>
 </div>
 <div id="section3" class="section">
     <div class="text-wr">
-        <h1 class="title">Work</h1>
-        <x-carousel/>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+        <h1 class="titleDark">Work</h1>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ Vite::asset('resources/media/woods.jpg') }}" class=" d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                @foreach($projects as $project)
+                <div class="carousel-item">
+
+                        <img src="/images/{{ $project->image }}" width="100px">
+
+
+                </div>
+                @endforeach
+                {{--<div class="carousel-item">
+                    <a href="{{ route('project') }}">
+                        <img src="{{ Vite::asset('resources/media/railway.jpg') }}" class=" d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </a>
+                </div>--}}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
 </div>
 <div id="section4" class="section">
-    <div class="text-wr">
-        <h1 class="title">Contact Me</h1>
+    <div class=" text-wr">
+        <h1 class=" title">Contact Me</h1>
         <x-contact-form></x-contact-form>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
     </div>
 </div>
 <x-footer></x-footer>
-<!-- Load the Bootstrap's JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<!-- Load the main JavaScript -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LLWL5N9CSM"></script>
-<script>
-    /*window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-LLWL5N9CSM');
-*/
-    window.slide = new SlideNav();
-</script>
 </body>
-</html>
 
