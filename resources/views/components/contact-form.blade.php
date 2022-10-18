@@ -14,23 +14,5 @@
     <div class="col-auto pt-5">
         <button type="submit" class="btn btn-primary mb-3">Send </button>
     </div>
-    <div class="container-fluid d-grid gap-3 align-items-center pt-3" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
-            <div>
-                <a  class="btn btn-primary fa-brands fa-github rounded-circle" href="https://github.com/PepijnvdK76" target="_blank">
-                </a>
-            </div>
-            <div>
-                <a  class="btn btn-primary fa-brands fa-linkedin rounded-circle" href="#" target="_blank">
-                </a>
-            </div>
-            <div>
-                <a  class="btn btn-primary fa-brands fa-instagram rounded-circle" href="https://github.com/PepijnvdK76" target="_blank">
-                </a>
-            </div>
-            <div>
-                <a  class="btn btn-primary fa-brands fa-spotify rounded-circle" href="https://open.spotify.com/playlist/1vOLPN0czVaU3XRGl1mKhi?si=734cbd80f8574c9e" target="_blank">
-                </a>
-            </div>
-    </div>
 </div>
 

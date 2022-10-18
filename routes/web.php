@@ -15,11 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'projectsHome'])
+Route::get('/', [PageController::class, 'projects'])
     ->name('home');
 
-Route::get('/project',[PageController::class, 'ShowProject'])
-    ->name('project');
+Route::get('/project', function (){
+    return view('project');
+})->name('project');
 
 Route::get('/dashboard', [PageController::class, 'projectsDashboard'])
     ->middleware(['auth'])->name('dashboard');

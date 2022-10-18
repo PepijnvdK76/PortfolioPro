@@ -3,19 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class ProjectController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
-     * @return Application|Factory|View
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
@@ -29,7 +24,7 @@ class ProjectController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return Response
+     * @return \Illuminate\Http\Response
      */
     public function create()
     {
@@ -39,8 +34,8 @@ class ProjectController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
-     * @return Response
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
@@ -75,8 +70,8 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param Project $project
-     * @return Application|Factory|View
+     * @param  \App\Models\Project  $project
+     * @return \Illuminate\Http\Response
      */
     public function show(Project $project)
     {
@@ -86,8 +81,8 @@ class ProjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Project $project
-     * @return Response
+     * @param  \App\Models\Project  $project
+     * @return \Illuminate\Http\Response
      */
     public function edit(Project $project)
     {
@@ -97,9 +92,9 @@ class ProjectController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
-     * @param Project $project
-     * @return Response
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Project  $project
+     * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Project $project)
     {
@@ -129,14 +124,14 @@ class ProjectController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param Project $project
-     * @return Response
+     * @param  \App\Models\Project  $project
+     * @return \Illuminate\Http\Response
      */
     public function destroy(Project $project)
     {
         $project->delete();
 
-        return redirect()->route('dashboard')
+        return redirect()->route('projects.index')
 
             ->with('success','Project deleted successfully');
     }

@@ -7,7 +7,7 @@
                 <h2>Add New Project</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('dashboard') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('projects.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Category:</strong>
-                <select class="form-control" name="category" type="select" aria-label="Default select example">
+                <select class="form-select" name="category" aria-label="Default select example">
                     <option value="School">School</option>
                     <option value="Internship" >Internship</option>
                     <option value="Own work" >Own work</option>
